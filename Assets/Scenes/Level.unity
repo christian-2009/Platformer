@@ -358,7 +358,7 @@ GameObject:
   - component: {fileID: 791993298}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -518,7 +518,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901899984}
-  m_LocalRotation: {x: 0.10184823, y: -0.16108304, z: 0.016714755, w: 0.98152936}
+  m_LocalRotation: {x: 0.10184824, y: -0.16108304, z: 0.016714755, w: 0.98152936}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1084,7 +1084,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   rotationSpeed: 70
-  buttonTime: 0.02
+  buttonTime: 0.5
   jumpAmount: 10
 --- !u!54 &1737320136
 Rigidbody:
@@ -1094,7 +1094,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737320134}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 3.46
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1112,12 +1112,25 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!4 &1737320140 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7575809708334398219, guid: 65ca7c5b3749b8c448d6c5e79d4a6f04, type: 3}
   m_PrefabInstance: {fileID: 4473894863571277240}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1737320144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737320134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 543a1b9f5ef12aa4bbef689e04294ef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 1
 --- !u!1 &2005367907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,7 +1145,7 @@ GameObject:
   - component: {fileID: 2005367908}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Friendly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1630,4 +1643,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1871623524549780895, guid: 65ca7c5b3749b8c448d6c5e79d4a6f04, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1737320135}
+    - targetCorrespondingSourceObject: {fileID: 1871623524549780895, guid: 65ca7c5b3749b8c448d6c5e79d4a6f04, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1737320144}
   m_SourcePrefab: {fileID: 100100000, guid: 65ca7c5b3749b8c448d6c5e79d4a6f04, type: 3}

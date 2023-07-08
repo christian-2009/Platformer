@@ -12,7 +12,6 @@ public class Movement : MonoBehaviour
     
     Rigidbody rb;
 
-    
     float jumpTime = 0;
     bool isJumping;
     bool isGrounded;
@@ -70,8 +69,6 @@ public class Movement : MonoBehaviour
     void HandleJump()
     {
         bool isJumpPressed = Input.GetKey(KeyCode.Space);
-
-        
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
